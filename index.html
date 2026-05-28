@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Scory: marcadores en vivo, resultados finales y partidos programados de fútbol, básquet y tenis en un solo lugar." />
+  <meta name="theme-color" content="#0d2a5c" />
+  <title>Scory · Scores y Estadísticas Deportivas</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231456b8'/%3E%3Ctext x='50' y='72' font-size='64' font-family='Segoe UI,sans-serif' font-weight='800' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <h1 class="logo">Scory<span class="logo__dot">.</span></h1>
+      <nav class="nav" aria-label="Filtrar por deporte">
+        <button class="nav__btn is-active" data-sport="all" aria-pressed="true">Todos</button>
+        <button class="nav__btn" data-sport="Fútbol" aria-pressed="false">Fútbol</button>
+        <button class="nav__btn" data-sport="Básquet" aria-pressed="false">Básquet</button>
+        <button class="nav__btn" data-sport="Tenis" aria-pressed="false">Tenis</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="hero">
+      <h2 class="hero__title">Marcadores en vivo y estadísticas</h2>
+      <p class="hero__subtitle">Sigue los resultados de tus deportes favoritos en un solo lugar.</p>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card">
+        <span class="stat-card__value" id="stat-matches">0</span>
+        <span class="stat-card__label">Partidos hoy</span>
+      </article>
+      <article class="stat-card">
+        <span class="stat-card__value" id="stat-live">0</span>
+        <span class="stat-card__label">En vivo</span>
+      </article>
+      <article class="stat-card">
+        <span class="stat-card__value" id="stat-goals">0</span>
+        <span class="stat-card__label">Puntos totales</span>
+      </article>
+    </section>
+
+    <section class="scores">
+      <div class="scores__head">
+        <h3 class="section-title">Resultados</h3>
+        <span class="scores__updated" id="last-updated" aria-live="polite"></span>
+      </div>
+      <div class="scores__grid" id="scores-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Scory © 2026 · Datos de demostración</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
